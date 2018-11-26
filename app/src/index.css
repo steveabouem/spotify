@@ -1,3 +1,32 @@
+body {
+  margin: 0;
+}
+
+#nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 60px;
+  max-height: 60px;
+  background: #0089da;
+  border-bottom: 2px solid white;
+  margin: 0;
+  color: white;
+}
+
+#nav ul {
+  display: flex;
+  flex-direction: row;
+  float: right;
+  justify-content: space-evenly;
+}
+
+#nav li {
+  padding: 1em;
+}
+
 * {
   font-family: 'Nanum Gothic', sans-serif;
   text-decoration: none;
@@ -7,6 +36,45 @@
   list-style: none;
 }
 
+
 .component-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 100vw;
   animation: reveal 1s linear;
+  background: rgb(0,153,243);
+  background: -moz-linear-gradient(180deg, rgba(0,153,243,1) 0%, rgba(0,0,0,1) 44%);
+  background: -webkit-linear-gradient(180deg, rgba(0,153,243,1) 0%, rgba(0,0,0,1) 44%);
+  background: linear-gradient(180deg, rgba(0,153,243,1) 0%, rgba(0,0,0,1) 44%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0099f3",endColorstr="#000000",GradientType=1);
+}
+
+.sub-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 90%;
+  margin: 1em auto;
+  background: white;
+  padding: 1%;
+}
+
+.quarter-width {
+  display: flex;
+  flex-direction: column;
+  min-width: 23%;
+  max-width: 23%;
+  margin: auto;
+}
+
+/* ===========EFFECTS============== */
+button:hover {
+  background: #0099f3!important;
+  color: white!important;
+}
+
+button:active {
+  filter: grayscale(1);
 }

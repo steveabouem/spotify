@@ -1,10 +1,10 @@
 import React from "react";
 
 class Navbar extends React.Component {
-  redner() {
+  render() {
     return (
-      <nav>
-        <ul className="navigation-links">
+      <nav id="nav">
+        <ul>
           <li>
             Login
           </li>

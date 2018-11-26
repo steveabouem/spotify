@@ -3,8 +3,12 @@ import React from "react";
 class SingleResult extends React.Component {
   render(){
     return (
-      <div className="component-container">
-        <h1>single result box</h1>
+      <div className="quarter-width">
+        {this.props.result? 
+        <h1>{this.props.result.artist}</h1> 
+        :
+        null 
+      }
       </div>
     )
   }

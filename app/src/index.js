@@ -7,6 +7,7 @@ import store from "./store";
 import './index.css';
 import './styles/landing.css';
 import './styles/animations.css';
+import './styles/mainSearch.css';
 
 ReactDOM.render(<Root store={store} />, document.getElementById('root'));
 
