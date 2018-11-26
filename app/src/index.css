@@ -1,0 +1,12 @@
+* {
+  font-family: 'Nanum Gothic', sans-serif;
+  text-decoration: none;
+  transition: 0.5s;
+  max-width: 100%;
+  max-height: 100%;
+  list-style: none;
+}
+
+.component-container {
+  animation: reveal 1s linear;
+}

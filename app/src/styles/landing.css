@@ -1,0 +1,52 @@
+.landing-page {
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  flex-direction: row;
+  text-align: center;
+  min-width: 100%;
+  min-height:100%;
+  min-width: 100%;
+  max-width: 100%;
+  background: rgb(0,153,243);
+  background: -moz-linear-gradient(180deg, rgba(0,153,243,1) 0%, rgba(0,0,0,1) 74%);
+  background: -webkit-linear-gradient(180deg, rgba(0,153,243,1) 0%, rgba(0,0,0,1) 74%);
+  background: linear-gradient(180deg, rgba(0,153,243,1) 0%, rgba(0,0,0,1) 74%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0099f3",endColorstr="#000000",GradientType=1);
+  animation: reveal 1s linear;
+}
+
+.landing-page div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+}
+
+.landing-page h1 {
+  color: white;
+  animation: reveal 1.5s linear;
+}
+
+.landing-page button {
+  min-width: 30%;
+  max-width: 30%;
+  margin: auto;
+  border-radius: 5px;
+}
+
+.landing-page a {
+  color: #0099f3;
+}
+
+.landing-page button:hover {
+    transform: translateY(5px);
+    background: #0099f3;
+    border-radius: 0;
+  }
+
+.landing-page button:hover a {
+  font-weight: bold;
+  color: white;
+}  
