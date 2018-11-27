@@ -12,7 +12,9 @@
 /build
 
 # misc
-secrets
+/config
+firebase.js
+/secrets
 secrets.js
 .vscode
 .DS_Store

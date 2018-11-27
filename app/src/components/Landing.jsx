@@ -17,9 +17,9 @@ class Landing extends React.Component {
             Welcome to MySpotify
           </h1>
           <button type="button" onClick={this.login}>
-            <Link to="/main">
+            <a>
               Login
-            </Link>
+            </a>
           </button>
         </div>
       </div>
