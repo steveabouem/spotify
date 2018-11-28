@@ -1,2 +1,3 @@
-export const SEARCH_ARTIST = "SEARCH_ARTIST";
-export const LOGIN = "LOGING";
+export const SEARCH_ARTIST = "SEARCH_ARTIST",
+            LOGIN = "LOGING",
+            ERROR = "ERROR"

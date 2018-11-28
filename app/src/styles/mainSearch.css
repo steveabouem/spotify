@@ -54,6 +54,25 @@
   flex-direction: column;
   justify-content: center;
 }
+
+
+/* ===========ERROR MESSAGE============== */
+
+.error-popup {
+  opacity: 0;
+  background: red;
+  color: white;
+  position: absolute;
+  top: 15%;
+  right: 15%;
+  border-radius: 5px;
+  padding: 1em;
+  font-weight: bold;
+  animation: fillColor 4s ease-out;
+  animation-play-state: paused;
+}
+
+
 /* ===========EFFECTS============== */
 .search-bar input:hover, .search-bar input:active {
   background: #ccfffa;
