@@ -68,3 +68,14 @@ export const searchArtist = input => dispatch => {
   })
 
 }
+
+export const convertRating = number => dispatch => {
+  let rawRating = Math.round(number / 20),
+      array = [];
+
+  for( let i = 1; i < rawRating; i ++ ) {
+    array.push(i);
+  }
+  
+return (array)
+}

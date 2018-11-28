@@ -8,22 +8,18 @@
   }
 }
 
-@keyframes fillColor {
+@keyframes shakeImage {
   
   0% {
-    opacity: 0.3;
+    transform: translateY(1px);
   }
-  
-  /* 50% {
-    overflow: hidden;
-    width: 200px;
-    max-height: 40px;
-    min-height: 40px;
 
-  } */
+  50% {
+    transform: translateY(-1px);
+  }
 
   100% {
-    opacity: 1;
+    transform: translateY(1px)
   }
   
 }

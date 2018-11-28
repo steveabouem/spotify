@@ -2,7 +2,6 @@ import React from "react";
 import Navbar from "./Navbar";
 import SearchResults from "./SearchResults.jsx";
 import Error from "./Error.jsx";
-import { results } from "../assets/local_api";
 import { connect } from "react-redux";
 import { searchArtist } from "../actions";
 
