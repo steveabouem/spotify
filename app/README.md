@@ -14,9 +14,8 @@ It couldn't be simpler:)
 
 3. Create /src/secrets/index.js, in which you will copy the following:
 ```index.js
-export const clientSecret = "6581bfc3b4a34a698df7855b146f641c", 
-client_id = "YOUR CLIENT ID",
-client_secret = "YOUR CLIENT SECRET";
+export const clientSecret = "YOUR CLIENT SECRET", 
+client_id = "YOUR CLIENT ID";
 ```
 4. cd into *app* and install all dependencies ``npm i
 
@@ -25,6 +24,15 @@ client_secret = "YOUR CLIENT SECRET";
 6. Enjoy
 
 ## Preview
+
+![Landing](https://github.com/steveabouem/spotify/blob/api/app/src/assets/images/Untitled.png)
+Landing page
+
+![Landing](https://github.com/steveabouem/spotify/blob/api/app/src/assets/images/login.png)
+Login redirection page
+
+![Landing](https://github.com/steveabouem/spotify/blob/api/app/src/assets/images/searh.png)
+Search  page
 
 ## Notes
 Beware of the cache. Your session's token expires after a period of time. If ever you get an error message while login, it most likely is due to the expired token kept in cache. Simply erase cache from browser history, or even better, navigate incognito.
