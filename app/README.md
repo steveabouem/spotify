@@ -25,5 +25,14 @@ client_id = "YOUR CLIENT ID";
 
 ## Preview
 
+![Landing](https://github.com/steveabouem/spotify/blob/api/app/src/assets/images/Untitled.png)
+Landing page
+
+![Landing](https://github.com/steveabouem/spotify/blob/api/app/src/assets/images/login.png)
+Login redirection page
+
+![Landing](https://github.com/steveabouem/spotify/blob/api/app/src/assets/images/searh.png)
+Search  page
+
 ## Notes
 Beware of the cache. Your session's token expires after a period of time. If ever you get an error message while login, it most likely is due to the expired token kept in cache. Simply erase cache from browser history, or even better, navigate incognito.
