@@ -14,9 +14,8 @@ It couldn't be simpler:)
 
 3. Create /src/secrets/index.js, in which you will copy the following:
 ```index.js
-export const clientSecret = "6581bfc3b4a34a698df7855b146f641c", 
-client_id = "YOUR CLIENT ID",
-client_secret = "YOUR CLIENT SECRET";
+export const clientSecret = "YOUR CLIENT SECRET", 
+client_id = "YOUR CLIENT ID";
 ```
 4. cd into *app* and install all dependencies ``npm i
 
