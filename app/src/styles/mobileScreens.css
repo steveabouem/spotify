@@ -1,0 +1,18 @@
+/* ============MOBILE SCREENS============*/
+
+@media(max-width: 768px) {
+
+  .search-form {
+    min-width: 80%;
+    max-width: 80%;
+  }
+  .search-bar button {
+    width: initial;
+  }
+
+  .quarter-width {
+    max-width: 70%;
+    min-width: 70%;
+    background: white;
+  }
+}
