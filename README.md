@@ -31,7 +31,7 @@ Landing page
 ![Landing](https://github.com/steveabouem/spotify/blob/api/app/src/assets/images/login.png)
 Login redirection page
 
-![Landing](https://github.com/steveabouem/spotify/blob/api/app/src/assets/images/searh.png)
+![Landing](https://github.com/steveabouem/spotify/blob/master/app/src/assets/images/searh.png)
 Search  page
 
 ## Still in progress
