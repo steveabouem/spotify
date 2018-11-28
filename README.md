@@ -34,5 +34,8 @@ Login redirection page
 ![Landing](https://github.com/steveabouem/spotify/blob/api/app/src/assets/images/searh.png)
 Search  page
 
+## Still in progress
+Responsiveness and style optimization. Album search.
+
 ## Notes
 Beware of the cache. Your session's token expires after a period of time. If ever you get an error message while login, it most likely is due to the expired token kept in cache. Simply erase cache from browser history, or even better, navigate incognito.
