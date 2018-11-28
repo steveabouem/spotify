@@ -1,9 +1,9 @@
-import { SEARCH_ARTIST, LOGIN } from "./types";
+import { SEARCH_ARTIST, LOGIN, ERROR } from "./types";
 import axios from "axios";
 import { results } from "../assets/local_api";
 import { client_id, client_secret } from "../secrets";
 
-var uri = "http://localhost:3000/login",
+var uri = "http://localhost:3000/main",
 scope = "user-read-private user-read-email";
 
 export const generateRandomString = length => {
@@ -32,19 +32,50 @@ export const login = event => dispatch => {
   
   window.location = url;
 
-  console.log("location", window.location);
   
   dispatch({
     type: LOGIN,
-    payload: window.location
+    payload: window.location.hash.split("=")[1].split("&")[0]
   })
 };
 
 
-export const searchArtist = () => dispatch => {
-  
-  dispatch({
-    type: SEARCH_ARTIST,
-    payload: results
+export const searchArtist = input => dispatch => {
+  // console.log("location", window.location.hash.split("=")[1].split("&")[0]);
+  axios.get(`https://api.spotify.com/v1/search?q=${encodeURIComponent(input)}&type=artist&limit=12`, 
+  {
+    headers: {
+      Authorization: `Bearer ${window.location.hash.split("=")[1].split("&")[0]}`,
+      Accept: "application/json",
+      "Content-Type": "application/json",
+
+    }
   })
+  .then(r => {
+    
+    dispatch({
+      type: SEARCH_ARTIST,
+      payload: r.data.artists.items
+    })
+    
+  })
+  .catch( e => {
+    dispatch({
+      type: ERROR,
+      payload: e
+    })
+    
+  })
+
+}
+
+export const convertRating = number => dispatch => {
+  let rawRating = Math.round(number / 20),
+      array = [];
+
+  for( let i = 1; i < rawRating; i ++ ) {
+    array.push(i);
+  }
+  
+return (array)
 }

@@ -1,37 +1,51 @@
 import React from "react";
 import Navbar from "./Navbar";
 import SearchResults from "./SearchResults.jsx";
-import { results } from "../assets/local_api";
+import Error from "./Error.jsx";
 import { connect } from "react-redux";
 import { searchArtist } from "../actions";
 
 class MainSearch extends React.Component {
   startSearch = async e => {
+
     e.preventDefault();
-    await this.props.searchArtist();
-    console.log(this.props);
+    let input = e.target.value;
     
+    await this.props.searchArtist(input);
   }
 
   render(){
+    console.log(this.props);
     
     return (
       <div className="component-container">
         <Navbar />
-        <form className="search-form" onSubmit={e =>{this.startSearch(e)}}>
+        {
+          this.props.results && this.props.results.error?
+        <Error error={this.props.results.error.message}/>
+        :
+        null
+        }
+        <form className="search-form">
           <label >
             Search
           </label>
 
           <div className="search-bar">
-            <input type="text" placeholder="Search for an artist">
-            </input>
+            <input type="text" placeholder="Search for an artist" 
+              onChange={e =>{this.startSearch(e)}} onPaste={e =>{this.startSearch(e)}}
+            />
             <button type="submit">
               GO
             </button>
           </div>
         </form>
-        <SearchResults results={this.props.results}/>
+        {this.props.results.items?
+
+        <SearchResults results={this.props.results.items}/>
+        :
+        null
+        }
       </div>
     )
   }

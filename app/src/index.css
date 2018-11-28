@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  overflow-x: hidden;
 }
 
 #nav {
@@ -34,19 +35,21 @@ body {
   max-width: 100%;
   max-height: 100%;
   list-style: none;
+  animation: reveal;
 }
 
 
 .component-container {
+  box-sizing: content-box;
   display: flex;
   justify-content: center;
   flex-direction: column;
   min-height: 100vh;
   min-width: 100vw;
+  max-width: 100%;
+  -webkit-animation: reveal 1s linear;
   animation: reveal 1s linear;
   background: rgb(0,153,243);
-  background: -moz-linear-gradient(180deg, rgba(0,153,243,1) 0%, rgba(0,0,0,1) 44%);
-  background: -webkit-linear-gradient(180deg, rgba(0,153,243,1) 0%, rgba(0,0,0,1) 44%);
   background: linear-gradient(180deg, rgba(0,153,243,1) 0%, rgba(0,0,0,1) 44%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0099f3",endColorstr="#000000",GradientType=1);
 }
@@ -55,18 +58,15 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  max-width: 90%;
+  max-width: 80%;
+  max-height: 500px;
   margin: 1em auto;
-  background: white;
-  padding: 1%;
-}
-
-.quarter-width {
-  display: flex;
-  flex-direction: column;
-  min-width: 23%;
-  max-width: 23%;
-  margin: auto;
+  background: rgb(2,0,36);
+  background: linear-gradient(190deg, rgba(2,0,36,1) 11%, rgba(9,9,121,1) 42%, rgba(85,6,149,1) 59%, rgba(3,142,170,1) 90%);  padding: 1%;
+  overflow: overlay;
+  background-attachment: fixed;
+  border-radius: 10px;
+  animation: reveal 1s linear;
 }
 
 /* ===========EFFECTS============== */

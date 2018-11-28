@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 2em auto;
+  margin: 20% auto 5% auto;
   width: 45%;
   height: 20vh;
   text-align: center;
@@ -53,7 +53,59 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background: #ffffff96;
+  padding: 1em;
+  margin: 1em auto;
+  border-bottom: 10px solid black ;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  animation: shakeImage 1s linear infinite;
 }
+
+.single-result-image h1 {
+  width: 100%;
+  text-align: center;
+  background: white;
+  margin: 0;
+  padding: 1%;
+  overflow: overlay;
+  max-height: 80px;
+  min-height: 80px;
+}
+
+.artist-image {
+  max-height: 190px;
+  min-height: 190px;
+  min-width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.star-rating img{
+  background: white;
+  padding: 2%;
+  width: auto;
+  border-radius: 20px;
+  margin: 0 1%;
+}
+
+/* ===========ERROR MESSAGE============== */
+
+.error-popup {
+  opacity: 0;
+  background: red;
+  color: white;
+  position: absolute;
+  top: 15%;
+  right: 15%;
+  border-radius: 5px;
+  padding: 1em;
+  font-weight: bold;
+  animation: fillColor 4s ease-out;
+  animation-play-state: paused;
+}
+
+
 /* ===========EFFECTS============== */
 .search-bar input:hover, .search-bar input:active {
   background: #ccfffa;
