@@ -19,7 +19,7 @@ client_id = "YOUR CLIENT ID";
 ```
 4. cd into *app* and install all dependencies ``npm i
 
-5. Start the application ``npm start
+5. Start the application ``npm start and visit localhost:3000 ( **this is the only white listed url** so make sure no other service or VM is already running on localhost:300)
 
 6. Enjoy
 
