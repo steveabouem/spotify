@@ -1,9 +1,8 @@
-import { SEARCH_ARTIST, LOGIN, ERROR } from "../actions/types";
+import { SEARCH_RESULTS, LOGIN, ERROR } from "../actions/types";
 
 const initialState = { };
 
 export default function ( state = initialState, action) {
-  // console.log("pay", action);
   
   switch(action.type) {
 
@@ -13,7 +12,7 @@ export default function ( state = initialState, action) {
         userInfo: action.payload
       }
       
-    case SEARCH_ARTIST: 
+    case SEARCH_RESULTS: 
     
       return {
         ...state,

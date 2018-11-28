@@ -5,7 +5,6 @@ import star from "../assets/images/star.png";
 class Rating extends React.Component {
 
   render() {
-    console.log("rating propr", this.props);
     
     let key = 0;
     return(
