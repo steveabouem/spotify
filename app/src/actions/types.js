@@ -1,3 +1,4 @@
-export const SEARCH_ARTIST = "SEARCH_ARTIST",
-            LOGIN = "LOGING",
-            ERROR = "ERROR"
+export const SEARCH_RESULTS = "SEARCH_RESULTS",
+SEARCH_ALBUMS = "SEARCH-ALBUMS",
+LOGIN = "LOGING",
+ERROR = "ERROR"

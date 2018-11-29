@@ -2,14 +2,14 @@ import React from "react";
 import SingleResult from "./SingleResult.jsx";
 
 class SearchResults extends React.Component {
+  
   render() {
-    console.log("results p", this.props);
-    
+    let key = 0;
     return(
       <div className="sub-container">
         {this.props.results? this.props.results.map( result => {
           return (
-            <SingleResult result={result} />
+            <SingleResult key={key += 0.4} result={result} />
           )
         })
         :

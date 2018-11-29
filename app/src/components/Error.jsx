@@ -3,7 +3,6 @@ import React from "react";
 class Error extends React.Component {
   render() {
     if(this.props.error.error)
-    console.log("error props",  this.props.error);
     
     return(
       <div>

@@ -1,4 +1,4 @@
-import { SEARCH_ARTIST, LOGIN, ERROR } from "./types";
+import { SEARCH_RESULTS, LOGIN, ERROR } from "./types";
 import axios from "axios";
 import { results } from "../assets/local_api";
 import { client_id, client_secret } from "../secrets";
@@ -20,7 +20,7 @@ export const generateRandomString = length => {
 
 export const login = event => dispatch => {
   
-
+  
   const state = generateRandomString(16);
   
   let url = "https://accounts.spotify.com/authorize";
@@ -31,7 +31,7 @@ export const login = event => dispatch => {
   url += `&state=${encodeURIComponent(state)}`;;
   
   window.location = url;
-
+  
   
   dispatch({
     type: LOGIN,
@@ -41,20 +41,19 @@ export const login = event => dispatch => {
 
 
 export const searchArtist = input => dispatch => {
-  // console.log("location", window.location.hash.split("=")[1].split("&")[0]);
   axios.get(`https://api.spotify.com/v1/search?q=${encodeURIComponent(input)}&type=artist&limit=12`, 
   {
     headers: {
       Authorization: `Bearer ${window.location.hash.split("=")[1].split("&")[0]}`,
       Accept: "application/json",
       "Content-Type": "application/json",
-
+      
     }
   })
   .then(r => {
     
     dispatch({
-      type: SEARCH_ARTIST,
+      type: SEARCH_RESULTS,
       payload: r.data.artists.items
     })
     
@@ -66,16 +65,42 @@ export const searchArtist = input => dispatch => {
     })
     
   })
-
+  
 }
 
 export const convertRating = number => dispatch => {
   let rawRating = Math.round(number / 20),
-      array = [];
-
+  array = [];
+  
   for( let i = 1; i < rawRating; i ++ ) {
     array.push(i);
   }
   
-return (array)
+  return (array)
+}
+
+
+export const getAlbums = id => dispatch => {
+  axios.get(`https://api.spotify.com/v1/artists/${encodeURIComponent(id)}/albums`, 
+  {headers: {
+    Authorization: `Bearer ${window.location.hash.split("=")[1].split("&")[0]}`,
+    Accept: "application/json",
+    "Content-Type": "application/json",
+  }}
+  )
+  .then( r => {
+    
+    dispatch({
+      type: SEARCH_RESULTS,
+      payload: r.data.items
+    })
+  })
+  .catch( e => {
+    
+    dispatch({
+      type: ERROR,
+      payload: {message: "Unable to retrieve albums"}
+    })
+  })
+  
 }

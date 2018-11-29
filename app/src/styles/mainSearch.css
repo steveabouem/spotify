@@ -47,6 +47,7 @@
 }
 
 .quarter-width {
+  border-top: 10px solid;
   min-width: 25%;
   max-width: 25%;
   padding: 1%;
@@ -56,18 +57,22 @@
   background: #ffffff96;
   padding: 1em;
   margin: 1em auto;
-  border-bottom: 10px solid black ;
+  border-bottom: 10px solid black;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
+  -webkit-animation: shakeImage 1s linear infinite;
   animation: shakeImage 1s linear infinite;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
 }
 
-.single-result-image h1 {
-  width: 100%;
+.artist-name {
+  min-width: 100%;
+  max-width: 100%;
   text-align: center;
   background: white;
   margin: 0;
-  padding: 1%;
+  font-weight: bold;
   overflow: overlay;
   max-height: 80px;
   min-height: 80px;
@@ -89,6 +94,22 @@
   margin: 0 1%;
 }
 
+.album-external {
+  text-align: center;
+  background: black;
+  font-weight: bold;
+  width: 100%;
+  border: none;
+  padding: 2%;
+  border-radius: 5px;
+}
+
+.album-external a {
+  color: greenyellow;
+  padding: 1em;
+}
+
+
 /* ===========ERROR MESSAGE============== */
 
 .error-popup {
@@ -109,4 +130,12 @@
 /* ===========EFFECTS============== */
 .search-bar input:hover, .search-bar input:active {
   background: #ccfffa;
+}
+
+.quarter-width:hover {
+  border-top-color: #00a4ff;
+}
+
+.album-external:hover a {
+  color: white;
 }
