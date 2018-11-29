@@ -17,9 +17,9 @@ It couldn't be simpler:)
 export const clientSecret = "YOUR CLIENT SECRET", 
 client_id = "YOUR CLIENT ID";
 ```
-4. cd into *app* and install all dependencies ``npm i
+4. cd into *app* and install all dependencies `npm i`
 
-5. Start the application ``npm start and visit localhost:3000 ( **this is the only white listed url** so make sure no other service or VM is already running on localhost:300)
+5. Start the application `npm start` and visit *localhost:3000* ( **this is the only white listed url** so make sure no other service or VM is already running on localhost:300)
 
 6. Enjoy
 
@@ -33,9 +33,6 @@ Login redirection page
 
 ![Landing](https://github.com/steveabouem/spotify/blob/master/app/src/assets/images/search.png)
 Search  page
-
-## Still in progress
-Responsiveness and style optimization. Album search.
 
 ## Notes
 Beware of the cache. Your session's token expires after a period of time. If ever you get an error message while login, it most likely is due to the expired token kept in cache. Simply erase cache from browser history, or even better, navigate incognito.
